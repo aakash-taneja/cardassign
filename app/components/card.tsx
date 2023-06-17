@@ -10,9 +10,12 @@ const Card = ({ data }: { data: any[] }) => {
   console.log(data);
   return (
     <div className="flex justify-start w-full flex-wrap">
-      {data.map((item: any) => {
+      {data.map((item: any, ind: number) => {
         return (
-          <div className="max-w-md mx-5 bg-white rounded-sm shadow-md overflow-hidden px-4 my-5 w-80">
+          <div
+            key={ind}
+            className="max-w-md mx-5 bg-white rounded-sm shadow-md overflow-hidden px-4 my-5 w-80"
+          >
             <div className="pt-4">
               <div className="flex justify-between">
                 <div className="">
