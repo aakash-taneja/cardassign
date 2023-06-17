@@ -1,12 +1,15 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { data } from "../data";
-import Card from "./card";
 import Filter from "./filter";
 
 const Tabs = () => {
   const [activeTab, setActiveTab] = useState("all");
   const [cardData, setCardData] = useState<any>();
+
+  useEffect(() => {
+    setCardData(data); // Set the initial card data to all the data
+  }, []);
 
   const handleTabClick = (tabName: string) => {
     setActiveTab(tabName);

@@ -1,4 +1,3 @@
-import Card from "./components/card";
 import Tabs from "./components/tabs";
 
 export default function Home() {
